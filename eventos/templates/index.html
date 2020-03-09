@@ -1,0 +1,188 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block content %}
+
+<div class="parallax-background">
+    <img class="parallax-background-image" src="{% static 'img/template/bl.jpg'%}">
+</div>
+          
+<div class= "container">     
+        <div class="row">
+            <div class="col-md-5 hidden-xs" >
+                
+            </div>
+            <div class="col-md-6 col-md-offset-1">
+                <div class="description" >
+                    <h2><img class="parallax-background-image" src="{% static 'img/logos/logo_lix_bot_lt.png'%}"></h2>
+
+                    <h5  style="position:absolute;  left:5;">En cada época de la humanidad ha habido una tecnología imperante. Desde la prehistoria hasta la actualidad la tecnología se ha ido perfeccionando de manera gradual.</h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-gray section-clients">
+    <div class="container text-center">
+        <h4 class="header-text1">EL GRAN MOTOR DE LA TECNOLOGÍA</h4>
+        <p class="style1">
+            El destino del ser humano es incrementar sus capacidades como cyborgs (combinación de partes orgánicas y electrónicas), gracias a los tantos dispositivos tecnológicos que ya ofrece la ciencia <br>
+        </p>
+        
+        <div class="logos">
+            <ul class="list-unstyled">
+                <li ><img src="{% static 'img/logos/cisco.png'%}"/></li>
+                <li ><img src="{% static 'img/logos/kali.png'%}"/></li>
+                <li ><img src="{% static 'img/logos/tp.png'%}"/></i>
+                <li ><img src="{% static 'img/logos/n.png'%}"/></li>
+                <li ><img src="{% static 'img/logos/u.png'%}"/></li>
+                <li ><img src="{% static 'img/logos/w.png'%}"/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="section section-presentation">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="description">
+                    <h4 class="header-text">EL FUTURO</h4>
+                    <p>La inteligencia artificial hace posible que los robots aprendan de la experiencia, se ajusten a nuevas aportaciones y realicen tareas como hacen los humanos, como por ejemplo computadoras que juegan ajedrez hasta automóviles que se conducen por sí solos, se sustentan mayormente en aprendizaje a fondo y procesamiento del lenguaje natural. Mediante el uso de estas tecnologías, los robots pueden ser entrenados para realizar tareas específicas procesando grandes cantidades de datos y reconociendo patrones en los datos. </p>
+                    
+                    <p>
+                </div>
+            </div>
+            <div class="col-md-5 col-md-offset-1 hidden-xs">
+                <img src="{% static 'img/template/mac.png'%}"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-demo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="description-carousel" class="carousel fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <img src="{% static 'img/template/examples/home_33.jpg'%}" alt="">
+                        </div>
+                        <div class="item active">
+                            <img src="{% static 'img/template/examples/home_22.jpg'%}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{% static 'img/template/examples/home_11.jpg'%}" alt="">
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators carousel-indicators-blue">
+                        <li data-target="#description-carousel" data-slide-to="0" class=""></li>
+                        <li data-target="#description-carousel" data-slide-to="1" class="active"></li>
+                        <li data-target="#description-carousel" data-slide-to="2" class=""></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <h4 class="header-text2">HOY TE TRAEMOS AL ROBOT BAMBI</h4>
+                <p>
+                    Bambi es un robot amigable que te acompañara a realizar tus actividades diarias como: cantar, bailar, hacer ejercicio y todo tipo de tareas que le puedes programar ¿Qué estas esperando para compartir momentos agradables con este compañero?
+                </p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-features">
+    <div class="container">
+        <h4 class="header-text text-center">FUNCIONES</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-blue">
+                        <div class="icon">  
+                        
+
+                        <!-- <i class="pe-7s-note2"></i>-->
+                        <img src="{% static 'img/logos/archivo.png'%}"/> </i>
+                        
+                    </div>
+                    <div class="text">
+                        <h4>Comparte Archivos</h4>
+                        <p>Puedes consultar informacion de cualquier tipo, Bambi se encargara de ayudarte con esas dificiles investigaciones y trabajos que envian los profesores </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-blue">
+                    <div class="icon">
+                        <!-- <i class="pe-7s-bell"></i>-->
+                        <img src="{% static 'img/logos/mensaje.png'%}"/> </i>
+                    </div>
+                    <h4>Mensaje</h4>
+                    <p>Puedes programarlo para que hable cualquier idioma, puedes conversar con Bambi el lenguaje que prefieras</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-blue">
+                    <div class="icon">
+                        <!--<i class="pe-7s-graph1"></i>-->
+                        <img src="{% static 'img/logos/musica.png'%}"/> </i>
+                    </div>
+                    <h4>Musica</h4>
+                    <p>Puede bailar cualquier tipo de coreografia, solo tienes que buscarla, Bambi tiene pasos excelentes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-testimonial">
+    <div class="container">
+        <h4 class="header-text text-center">Lo que la gente piensa</h4>
+        <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner " role="listbox">
+                <div class="item">
+                    <div class="mask">
+                        <img src="{% static 'img/faces/face-4.jpg'%}">
+                    </div>
+                    <div class="carousel-testimonial-caption">
+                        <p style="text-align: center">Stefanny Rodriguez</p>
+                        <h3>Excelentes aportes a las tendencias tecnologicas</h3>
+                    </div>
+                </div>
+                <div class="item active">
+                    <div class="mask">
+                        <img src="{% static 'img/faces/face-3.jpg'%}">
+                    </div>
+                    <div class="carousel-testimonial-caption">
+                        <p style="text-align: center">Juan Perez</p>
+                        <h3>Que buenos proyecto se encuentras propuestos</h3>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="mask">
+                        <img src="{% static 'img/faces/face-2.jpg'%}">
+                    </div>
+                    <div class="carousel-testimonial-caption">
+                        <p style="text-align: center">John Min Ho</p>
+                        <h3>Grandiosos los avances tencologicos que manejan</h3>
+                    </div>
+                </div>
+            </div>
+            <ol class="carousel-indicators carousel-indicators-blue">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="section section-no-padding">
+    <div class="parallax filter-gradient blue" data-color="blue">
+        <div class="parallax-background">
+            <img class ="parallax-background-image" src="{% static 'img/template/bg3.jpg'%}"/>
+        </div>
+        <div class="info"> <!-- CAMBIAR EL LINK (NO OLVIDAR) -->
+            <a href="http://www.creative-tim.com/product/awesome-landing-page" class="btn btn-neutral btn-lg btn-fill">CONTÁCTANOS</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,153 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="{%static 'img/favicon.ico' %}">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        {% block title %}<title>LIX BOX</title>{% endblock %}
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
+        <!-- 
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="assets/css/landing-page.css" rel="stylesheet"/>-->
+        
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+        <link rel="stylesheet" href="{% static 'css/landing-page.css' %}">
+
+        <!--     Fonts and icons     -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+       
+       <!-- <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+        <link href="assets/css/nav-bar.css" rel="stylesheet" />-->
+
+        <link rel="stylesheet" href="{% static 'css/pe-icon-7-stroke.css'%}">
+        <link rel="stylesheet" href="{% static 'css/nav-bar.css' %}">
+
+          <!--<link rel="stylesheet" href="assets/css/chat/styles-merged.css">
+          <link rel="stylesheet" href="assets/css/chat/styles_chat.css">
+          <link rel="stylesheet" href="assets/css/chat/style.min.css">
+          <link rel="stylesheet" href="assets/css/chat/custom.css">-->
+
+        <link rel="stylesheet" href="{% static 'css/chat/styles-merged.css'%}">
+        <link rel="stylesheet" href="{% static 'css/chat/style.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/chat/custom.css' %}">
+        <link rel="stylesheet" href="{% static 'css/chat/styles_chat.css' %}">
+
+    </head>
+    <body class="landing-page landing-page1">
+        <div>
+        <nav class="navbar navbar-default banner">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'index' %}" style="color: #00BFFF">LIX BOX</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                    <ul class="nav navbar-nav navbar-right navbar-nav-primary">
+                        <li><a href="{% url 'index' %}" style="color: #00BFFF">Home</a></li>
+                        <li><a href="{% url 'proyectos' %}" style="color: #00BFFF">PROYECTOS</a></li>
+                        <li><a href="{% url 'articulos' %}" style="color: #00BFFF">ARTICULOS</a></li>
+                        <li><a href="{% url 'eventos' %}" style="color: #00BFFF">EVENTOS</a></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+            </div>
+            <div class="parallax filter-gradient blue" data-color="blue">
+                
+            
+
+
+                {% block content %}{% endblock %}
+
+                
+            </div>
+            <div>
+                <footer class="footer">
+                    <div class="container">
+    
+                        <div class="copyright">
+                            &copy; 2020 </a>LIXBOT
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            
+            <div class="chat">
+                <audio id="tono" src="{% static 'audio/tono.mp3' %}" preload="auto">
+                </audio>
+                <p class="title-chat">Preguntanos</p>
+                <div class="box-chat">
+                <div class="ocultar-chat" style="display: none;">
+                    <div class="body-chat">
+                    </div>
+                    <form id="chat-form" method="post" data-post-url="{% url 'chat' %}" data-post-get-url="{% url 'get-chat' %}" autocomplete="off">
+                    {% csrf_token %}
+                    <div class="form-chat">
+                        <input type="hidden" name="token" value="">
+                        <input type="text" class="input-mensaje" Placeholder="Escribe un mensaje" name="mensaje">
+                        <button type="submit" style="background:#1E90FF" class="btn btn-primary button-send" Placeholder="Escribe un mensaje">Enviar</button>
+                    </div>
+                    </form>
+                </div>
+                <div class="create-chat">
+                    <form id="create-chat-form" method="post" data-post-url="{% url 'create-chat' %}" autocomplete="off">
+                    {% csrf_token %}
+                    <div class="form-new-chat">
+                        <div class="row text-center">
+                        <p>Hola, por favor rellena la siguiente informacion:</p>
+                        </div>
+                        <div class="row text-center inputs-new-chat">
+                        <label for="nombre" class="col-form-label sm-2">Nombre</label>
+                        <input type="text" required class="col-form sm-10 create-chat-nombre" placeholder="Maria Perez" name="nombre">
+                        <label for="correo" class="col-form-label sm-2">Correo</label>
+                        <input type="email" required="" class="create-chat-correo" placeholder="ejemplo@mail.com" name="correo">
+                        </div>
+                        <div class="row text-center">
+                        <button type="submit" class="btn btn-info button-create-chat">Iniciar chat</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+
+    </body>
+    <!--<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.js" type="text/javascript"></script>
+    <script src="assets/js/awesome-landing-page.js" type="text/javascript"></script>
+
+    <script src="assets/js/chat/scripts.min.js"></script>
+    <script src="assets/js/chat/main.min.js"></script>
+    <script src="assets/js/chat/custom.js"></script>
+    <script src="assets/js/chat/jquery.cookie.js"></script>
+    <script src="assets/js/chat/chat.js"></script>-->
+
+    <script src="{% static 'js/jquery-1.10.2.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery-ui-1.10.4.custom.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/bootstrap.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/awesome-landing-page.js' %}" type="text/javascript"></script>
+
+    <script src="{% static 'js/chat/scripts.min.js' %}"></script>
+    <script src="{% static 'js/chat/main.min.js' %}"></script>
+    <script src="{% static 'js/chat/custom.js' %}"></script>
+    <script src="{% static 'js/chat/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/chat/chat.js' %}"></script>    
+    <script src="{% static 'js/nav-bar.js' %}"></script>
+
+
+</html>
